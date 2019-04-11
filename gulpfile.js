@@ -18,7 +18,7 @@ filenames.forEach(function(name){
     return gulp.src(['./fixed/'+name+'-clean.html', './UpdateHistoryRow.txt'])
                .pipe(concat(name+'-fixed.html'))
 			   .pipe(replace(/href='pdf-target'/g,'href="'+linkPath+name+'.pdf"'))
-			   .pipe(replace(/name='pdf-target'/g,'name=''+name+'''))
+			   .pipe(replace(/name='pdf-target'/g,'name="'+name+'"'))
 			   .pipe(replace(/{{\sdate\s}}/g,today.toLocaleDateString('en-us', dateOptions)))
                .pipe(gulp.dest('./fixed'));
   });
@@ -34,7 +34,7 @@ gulp.task('cleanUp', function(){
              //Remove the 'Description' sub-heading
              .pipe(replace(/<h2>Description<\/h2>(\r\n)?/g,''))
 			 //Remove 'Print' and 'Download' buttons
-			 .pipe(replace(/<a href='javascript: window.print();' class='print_btn'>Print<\/a><a href='#' class='download_btn'>Download<\/a>/,''))
+			 .pipe(replace(/<a href="javascript: window\.print\(\);" class="print_btn">Print<\/a><a href="#" class="download_btn">Download<\/a>/,''))
              //Remove second column in method of calculation table
              .pipe(replace(/<td>\r\n\t*<p class='data_summary'>.+\r\n\t*<\/p><\/td>\r\n/g,''))
              //Change Basic Categories to 'Recommended Subset Analysis Categories'
