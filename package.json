@@ -1,0 +1,24 @@
+{
+  "name": "ci-page-fixer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cleanUp": "gulp cleanUp",
+    "remove": "gulp remove",
+    "append": "gulp append",
+    "build": "gulp build",
+	"fix": "gulp"
+  },
+  "author": "James Lane",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-ex-replace": "^0.5.8",
+    "gulp-rename": "^1.4.0"
+  },
+  "dependencies": {
+    "path": "^0.12.7"
+  }
+}
