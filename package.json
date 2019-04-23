@@ -8,7 +8,7 @@
     "remove": "gulp remove",
     "append": "gulp append",
     "build": "gulp build",
-	"fix": "gulp"
+	  "fix": "gulp"
   },
   "author": "James Lane",
   "license": "ISC",
