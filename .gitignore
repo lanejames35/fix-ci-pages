@@ -3,3 +3,4 @@ pdf/*
 *.html
 *.txt
 node_modules/*
+done/*
